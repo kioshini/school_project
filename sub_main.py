@@ -32,6 +32,21 @@ lt = ['7:30:10',
       '18:00:30',
       '18:50:30']  # Lesson time
 
+mt = [
+    '7:30:10',
+    '8:35:10',
+    '9:20:10',
+    '10:10:10',
+    '11:05:10',
+    '12:00:10',
+    '12:55:10',
+    '13:40:10',
+    '14:35:10',
+    '15:20:10',
+    '16:15:10',
+    '17:10:10',
+    '17:55:10']
+
 
 @router.message(Command('a'))
 async def a(message: Message):
@@ -39,7 +54,7 @@ async def a(message: Message):
         if datetime.now().weekday() == 0:
             current_time = datetime.now().strftime("%H:%M:%S")
             time.sleep(1)
-            if current_time == lt[0]:
+            if current_time == mt[0]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -48,7 +63,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_1)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[1]:
+            elif current_time == mt[1]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -58,7 +73,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_2)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[2]:
+            elif current_time == mt[2]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -68,7 +83,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_3)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[3]:
+            elif current_time == mt[3]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -77,7 +92,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_4)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[4]:
+            elif current_time == mt[4]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -87,7 +102,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_5)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[5]:
+            elif current_time == mt[5]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -97,7 +112,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_6)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[6]:
+            elif current_time == mt[6]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -107,7 +122,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_7)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[7]:
+            elif current_time == mt[7]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
@@ -117,7 +132,7 @@ async def a(message: Message):
                             await bot.send_message(user[0], lessons.mon_8)
                     except:
                         db.set_active_user(user[0], 0)
-            elif current_time == lt[8]:
+            elif current_time == mt[8]:
                 print('pass')
                 users = db.get_users()
                 for user in users:
